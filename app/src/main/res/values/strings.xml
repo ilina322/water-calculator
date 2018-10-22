@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">WaterCalculator</string>
+    <string name="calculator">calculator</string>
+    <string name="daily_intake">daily intake</string>
 </resources>

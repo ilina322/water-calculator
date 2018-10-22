@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context="com.example.android.watercalculator.activities.MainActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/water_drop_2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:textStyle="bold"
+            android:fontFamily="casual"
+            android:textColor="@color/colorWhite"
+            android:id="@+id/edt_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/edt_background"
+            android:gravity="center"
+            android:hint="Weight"
+            android:inputType="numberDecimal"
+            android:padding="8dp"
+            android:textColorHint="@color/colorWhite" />
+
+
+        <EditText
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:fontFamily="casual"
+            android:id="@+id/edt_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/edt_background"
+            android:gravity="center"
+            android:hint="Hours activity"
+            android:inputType="numberDecimal"
+            android:padding="8dp"
+            android:textColorHint="@color/colorWhite" />
+
+
+        <EditText
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:fontFamily="casual"
+            android:id="@+id/edt_temperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/edt_background"
+            android:gravity="center"
+            android:hint="Temperature outside"
+            android:inputType="numberDecimal"
+            android:padding="8dp"
+            android:textColorHint="@color/colorWhite" />
+
+        <Button
+            android:textStyle="bold"
+            android:fontFamily="casual"
+            android:id="@+id/btn_calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/calculate_button_background"
+            android:text="calculate"
+            android:textColor="@color/colorWhite" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:fontFamily="casual"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/txt_litres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:textSize="20sp" />
+
+</RelativeLayout>

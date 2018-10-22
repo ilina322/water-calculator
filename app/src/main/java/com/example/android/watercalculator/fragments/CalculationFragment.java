@@ -1,32 +1,35 @@
-package com.example.android.watercalculator;
+package com.example.android.watercalculator.fragments;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.android.watercalculator.Calculator;
+import com.example.android.watercalculator.R;
 
 import java.text.DecimalFormat;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity {
+public class CalculationFragment extends BaseFragment {
 
-    @BindView(R.id.edt_activity) EditText edtActivity;
+    @BindView(R.id.edt_activity)
+    EditText edtActivity;
     @BindView(R.id.edt_weight) EditText edtWeight;
     @BindView(R.id.edt_temperature) EditText edtTemperature;
-    @BindView(R.id.txt_litres) TextView txtLitres;
+    @BindView(R.id.txt_litres)
+    TextView txtLitres;
     Calculator calculator = new Calculator();
     DecimalFormat df = new DecimalFormat("#.00");
     double result;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+    protected int getLayoutRes() {
+        return R.layout.fragment_calculation;
+    }
+
+    @Override
+    protected void onViewCreated() {
     }
 
     @OnClick(R.id.btn_calculate)
@@ -42,5 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    public static CalculationFragment newInstance() {
+        return new CalculationFragment();
+    }
 }
